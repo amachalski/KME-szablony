@@ -4,10 +4,10 @@
 \usepackage{ze}
 
 % tytul referatu
-\title{Uwagi odnośnie redakcji artykułów do Zeszytów Energetycznych}
-\shorttitle{Uwagi redakcyjne...}
+\title{Comments on the editing of articles for Zeszyty Energetyczny}
+\shorttitle{Editorial notes...}
 % tytul referatu w jez. angielskim
-\titleEng{Tytuł referatu w języku angielskim}
+\titleEng{English title}
 % Autorzy
 \author{Jerzy Kulej\affmark[1], Dominik Bajoński\affmark[2]}
 % Autorzy nagłówek
@@ -15,7 +15,7 @@
 % Afiliacje autorów
 \affiliations{
     \affaddr[1]{Politechnika Kaliska, Katedra Procesów Cieplno-Przepływowych}
-    \affaddr[2]{Politechnika Wrocławska, Katedra Turbin i Modelowania Procesów Cieplno-Przepływowych}
+    \affaddr[2]{Wroclaw University of Science and Technology, Department of Energy Technologies, Turbines and Modeling of Heat-Flow Processes}
 }
 % Kontaktowy adres mailowy
 \contactaddress{ze@pwr.edu.pl}
@@ -25,76 +25,77 @@
 \maketitle
 
 \begin{ZEabstract}
-Podano, uwagi odnośnie  długości i redakcji tekstu.
+Short description and comments on LaTeX paper formating.
 \end{ZEabstract}
 
 \begin{keywords}
-\LaTeX, tylda, rysunki .
+\LaTeX, figures, equations
 \end{keywords}
 
 \normalsize
 
-\section{Wprowadzenie}
+\section{Introduction}
 
-Prosimy o przygotowanie artykułu według szablonu \textbf{szablonZeszyty} i stylu ze.sty.
-Plik szblonu \textbf{ ze.sty} musi znajdować się w katalogu, w którym piszemy i  kompilujemy nasz artykuł. Tekst kompilujemy używając\textbf{ PdfLatex}. Powstaje od razu wersja .pdf. Wersję źródłową \emph{nazwisko}.tex i wersję \emph{nazwisko}.pdf wraz z rysunkami należy przesłać na adres \textbf{ze@pwr.edu.pl}.
+Please prepare your paper according to the \textbf{KME-paper-template} and style ze.sty.
+The \textbf{ze.sty} template file must be in the directory where paper (.tex) file is located. Preffered compilator is \textbf{PdfLatex}. A .pdf should be created without any errors. The source \emph{surname}.tex and the \emph{surname} .pdf version along with the drawings should be sent to the address \textbf{ze@pwr.edu.pl}.
 
-Zbiory z rysunkami nazywamy rysunek1, rysunek2, .. itd. w kolejności takiej jak się pojawiają w tekście artykułu. Koniecznie poddać szczegółowemu sprawdzeniu artykuł w formacie .pdf. Rysunki wstawiamy w formacje *.jpg lub *.png.  W preambule należy wpisać tytuł swojego referatu i inne swoje dane.
-Niepotrzebne, struktury "zawieszamy" stawiając na początku linii znak \%. 
+The files with pictures should be called picture1, picture2, ... etc. in the order as they appear in the text of the article. Be sure to carefully check the article in .pdf format. Put the drawings in the * .jpg or * .png format. In the preamble, enter the title of your paper and your other details.
 
-Pierwszy raz kompilujemy dwukrotnie aby zostały wypełnione odwołania do literatury. Pozycje literaturowe  podawać zgodnie ze wzorcem. Starać się zachować kolejność alfabetyczną. Cytujemy używając np. \textbf{$\backslash$cite}\{Aref1\}  co utworzy \cite{Aref1}. Literaturę zamieszczamy według wzoru podanego na końcu niniejszego wprowadzenia . Na stronie zeszytów \textbf{www.ze.pwr.edu.pl} zostanie zamieszczony  prosty podręcznik do \LaTeX'a. Wszelkie inne informacje również będą zamieszczane na tej stronie internetowej. Można zwrócić się o pomoc do Panów dr hab. Sławomira Pietrowicza   lub do mnie (Henryk Kudela). Wielu kolegów posługuje się już świetnie \LaTeX'em, więc do nich również można się zwrócić o pomoc. Istnieje wiele tutoriali, podręczników. Polecanie godnym jest łatwo dostępna  publikacja Tobiasa Oetikera i innych: \textbf{Nie~za~krótkie wprowadzenie do systemu \LaTeX 2}.
+When compiling for the first time please do it twice so that the references to the literature are filled in. Provide literature items in accordance with the template. Try to follow the alphabetical order. Please quote using \textbf{$\ backslash$cite}\{Aref1\} which will create \cite{Aref1}. A simple manual for\ LaTeX will be posted on the \textbf{www.ze.pwr.edu.pl} page. Any other information will also be posted on this website. There are many tutorials, textbooks. Worth recommending is the readily available publication by Tobias Oetiker and others: \textit{Not too short introduction to \LaTeX}.
 
 \section{Szczegółowe uwagi odnośnie redakcji artykułów}
-Wcześniejsza praca nad redakcją Zeszytów pozwala sformułować kilka dodatkowych uwag, których uwzględnienie byłoby niezwykle pożyteczne:
+Earlier work on the editing of our journal allowed us to create list of few important directions for authors:
 \begin{enumerate}
-    \item Należy zwrócić uwagę na czytelność zamieszczanych w tekście rysunków. Dla zachowania czytelności czcionka na rysunkach powinna być tej wielkości co podpis pod rysunkiem. Unikać zdjęć stanowisk doświadczalnych, zdjęć dokumentujących odczyty z przyrządów,
-    \item Zwrócić uwagę, aby koniec linii nie kończył się pojedynczą literą , np. w, z, i itp. (tzw. zawieszki). Odstępy, na których nie wolno złamać wiersza, zaznacza się w pliku źródłowym przez umieszczenie znaku tyldy \~{}  zamiast odstępu np.~ w\~{}~końcu.
-    \item  Pojedyncze zadanie zamykające akapit nie może przenosić się na nową stronę. Należy tak formatować tekst, dobierając wielkość rysunków i ich położenie, aby wymusić zachowanie ciągłość myśli wyrażonej w tekście. Do dyspozycji jest jeszcze instrukcja \textbf{newline}. Nową myśl (akapit) powinniśmy zaczynać wcięciem. Jeżeli Latex tego nie zrobił automatycznie to można to wymusić instrukcją  \indent.
-    \item Wzory  chemiczne  jak również wymiary jednostek fizycznych piszemy prosto. Aby skorzystać z możliwości trybu matematycznego pisania indeksów można użyć  instrukcji  \text{$\backslash$operatorname}. Miedzy liczbą a jednostką fizyczną pozostawimy spację np. 1 m$^2$. Natomiast nie ma spacji przy wielkości wyrażającej  temperaturę  w stopniach Celsjusza, no 1$^o$C.
-    \item Jeżeli we worze matematycznym został użyty symbol i jest on używany w tekście to musi być napisany italikiem (pochyło),
-    \item Artykuł powinien zawierać parzystą liczbę stron, nie mniej niż 8. 
+    \item Please pay attention to the quality of the drawings included in the text. For the sake of readability, the font size in the drawings should be of the same size as the caption under the drawing. Avoid photos of test stands, photos documenting readings from instruments etc.
+    \item Make sure that the end of the line does not end with a single letter. Blanks where lines must not be broken are marked in the source file by a tilde \~{}.
+    \item  A single sentence closing paragraph cannot move to a new page. The text should be formatted in such a way as to choose the size of the figures and their location so as to make it possible to maintain the continuity of the thought expressed in the text. There is also the \textbf{newline} statement available. Please start a new paragraph with an indentation. If Latex did not do it automatically, it can be forced with the \indent instruction.
+    \item Please write the chemical formulas as well as the dimensions of physical units in simple terms. Additionally please leave a space between the number and the physical unit, e.g. 1 m$^2$. 
+    \item If a symbol is used in a mathematical formula and it is used in the text, it must be written in italics (italics).
+    \item Paper should contain an even number of pages, not less than 8.. 
 \end{enumerate}
 
-\section{Przykłady wzorów matematycznych}
-Przykład fragment tekstu z \textbf{równaniami} zamieszczono poniżej.
-Równania ruchu lepkiego i nieściśliwego płynu mają postać (równanie \ref{eom} oraz \ref{incmp} - odniesienie do równania zapisujemy jako np. $\backslash$ref\{eom\}, natomiast równanie ma dodany $\backslash$label\{eom\}, który tworzy podstawę odniesienia):
+\section{Examples of mathematical formulas}
+An example of a text excerpt with \textbf{equations} is shown below.
+
+The equations of motion of viscous and incompressible fluid have the form (equation \ref{eom} and \ref{incmp} - please write the reference to the equation as e.g. $\backslash$ref\{eom\}, and use $\backslash$label\{eom\} inside equation enviroment, which will form the reference base:
 \begin{equation}\label{eom}
 \frac{\partial{\mathbf{u}}}{\partial t}+(\mathbf{u} \cdot \nabla)\mathbf{u}=-\frac{1}{\rho}\nabla p+\nu \Delta \mathbf{u},
 \end{equation}
 \begin{equation}\label{incmp}
 \nabla \cdot \mathbf{u}=0,
 \end{equation}
-gdzie $\mathbf{u}=(u,v,w)$ jest wektorem prędkości, $\rho$ -- gęstością płynu, $p$ -- ciśnieniem a $\nu$ -- kinematycznym współczynnikiem lepkości.
+where $\mathbf{u}=(u,v,w)$ velocity vector, $\rho$ -- density, $p$ -- pressure and $\nu$ -- kinematic coefficient of viscosity.
 
-\section{Przykład zamieszczania wykresów, obrazków.}
+\section{Examples for figures and tables}
 
-W dalszej części przedstawiono przykłady zamieszczania \textbf{wykresów, obrazków oraz tabel.}
-Pojedynczy wykres lub zdjęcie (Rys. \ref{obraz1} - odniesienie do obrazu tworzymy analogicznie do przykładu z równaniem):
+Examples of \textbf{charts, pictures and tables are presented below.}
+A single graph or photo (Fig. \ref{image1} - reference to the image is created similarly to the example with the equation):
 \begin{figure}[h!]
 \centering
-\includegraphics[width=0.45\linewidth]{figure1.jpg}
-\caption{Jeden obrazek z podpisem}\label{obraz1}
+\includegraphics[width=0.3\linewidth]{figure1.jpg}
+\caption{Jeden obrazek z podpisem}\label{image1}
 \end{figure}
 
-Dwa wykresy lub zdjęcia obok siebie z dwoma niezależnymi popisami (Rys \ref{obraz2} oraz Rys. \ref{obraz3}):
+\noindent Two charts or photos side by side with two independent captions (Fig. \ref {image2} and Fig.~\ref{image3}):
 
 \begin{figure}[htb]
 \centering
 \begin{minipage}[t]{0.42\linewidth}
 \centering
 \includegraphics[width=0.65\linewidth]{figure1.jpg}
-\caption{Dwa obrazki obok siebie z dwoma podpisami (lewy)}\label{obraz2}
+\caption{Two pictures side by side with two captions (left)}\label{image2}
 \end{minipage}
 \quad
 \begin{minipage}[t]{0.42\linewidth}
 \centering
 \includegraphics[width=0.65\linewidth]{figure1.jpg}
-\caption{Dwa obrazki obok siebie z dwoma podpisami (prawy)}\label{obraz3}
+\caption{Two pictures side by side with two captions (right)}\label{image3}
 \end{minipage}
 \end{figure}
 
-Przykład tworzenia tabeli (Tab. \ref{tab1} oraz Tab. \ref{tab:cryocoolers}).\\
-\begin{table} [!ht]
+Below is an example of simple table created with table environment (Tab. \ref{tab1}. For fast creation of tables with larger datasets please use available online tools (for example this \href{https://www.tablesgenerator.com/}{Online table generator})
+
+\begin{table}[!htb]
 \caption{Przyspieszenie osiągane dla metody Jacobiego.}\label{tab1}
 \centerline{
 \begin{tabular}{|c|c|c|c|c|}
@@ -108,7 +109,8 @@ Liczba węzłów & tsl  &  tx &  nc & frm nc\\
 \end{tabular}}
 \end{table}
 
-Dodatkowy przykład tworzenia tabeli.\\
+\noindent An additional example of creating a table.
+
 \begin{table}[h]
     \centering
     \caption{Cryogenic coolers}
@@ -127,10 +129,9 @@ Dodatkowy przykład tworzenia tabeli.\\
     \end{tabular}
 \end{table}
 
+\section{Summary}
 
-\section{Podsumowanie}
-
-W pracy przedstawiona została implementacja metody cząstek wirowych typu „wir w komórce” wykorzystująca metodę dekompozycji lepkościowej.
+The purpose of a summary is to give the reader a clear, objective picture of the original text. Most importantly, the summary restates only the main points of a text.
 
 \begin{thebibliography}{10}
 {\small
@@ -138,7 +139,6 @@ W pracy przedstawiona została implementacja metody cząstek wirowych typu „wi
 \bibitem{Holden_etal_2007} Holden H., Karlsen K.H., Lie K.-A., Risebro W.H. \textit{Splitting Methods for Partial Differential Equations with Rough Solutions}, Society for Industrial and Applied Mathematics,  2007
 \bibitem{LeVeque_2010} LeVeque R.J. \textit{Finite Difference Methods for Ordinary and Partial Differential Equations}, European Mathematical Society, 2010
 \bibitem{Kudela_Kosior_2013} Kudela H., Kosior A. \textit{Parallel reconnection of vortex tube reconnection using a graphics card and the 3D Vortex-in-Cell method}, Procedia IUTAM, \textbf{7}, 59-66, 2013
-
 }
 \end{thebibliography}
 \end{document}

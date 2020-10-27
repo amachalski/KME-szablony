@@ -1,0 +1,116 @@
+%
+% Abstract template
+% "Young Scientists in Power Engineering"
+%
+\usepackage[left=2cm,top=2cm,right=2cm,bottom=3.5cm,nofoot]{geometry}
+\usepackage{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{hyperref}
+%Fonts
+\usepackage{times}
+\usepackage{enumitem}
+\setlist[itemize]{noitemsep,nolistsep}
+
+% Header footer
+\usepackage{fancyhdr}
+
+\fancypagestyle{firstpagestyle}
+{
+   \fancyhf{}
+   \lhead{\includegraphics[width=2cm]{logoKME.jpg}}
+   \chead{II ed. XII Conference Young Scientists in Power Engineering\\
+   Faculty of Mechanical and Power Engineering\\
+   Wrocław University of Science and Technology\\
+   9-11 december 2020}
+	\setlength\headheight{54pt}
+}
+
+% Text size
+\renewcommand{\normalsize}{\fontsize{11}{12}\selectfont}
+\renewcommand{\small}{\fontsize{10}{12}\selectfont}
+\renewcommand{\scriptsize}{\fontsize{10}{12}\selectfont}
+\renewcommand{\footnotesize}{\fontsize{10}{12}\selectfont}
+\renewcommand{\large}{\fontsize{14}{16}\selectfont}
+\renewcommand{\Large}{\fontsize{14}{16}\selectfont}
+\renewcommand{\LARGE}{\fontsize{18}{21}\selectfont}
+
+\makeatletter
+
+\def\institution#1{\gdef\@institution{#1}}
+\def\@institution{\@latex@error{No \noexpand\institution given}\@ehc}
+
+\def\supervisor#1{\gdef\@supervisor{#1}}
+\def\@supervisor{\@latex@error{No \noexpand\supervisor given}\@ehc}
+
+\def\headrule{{%
+  \if@fancyplain\let\headrulewidth\plainheadrulewidth\fi
+  \hrule\@height\headrulewidth\@width\headwidth\vskip2pt%
+  \hrule\@height\headrulewidth\@width\headwidth\vskip-\headrulewidth\vskip-4pt
+}}
+
+% Title
+\renewcommand{\maketitle}{
+  \begin{center}
+      \vspace*{12pt}
+      \LARGE \MakeUppercase{\textbf{\@title}}\\
+      \vspace{12pt}
+      \normalsize \textit{\@author} \\
+  \end{center}
+  \begin{center}
+  \noindent\large{\textbf{Abstract}}
+  \end{center}
+}
+
+\newcommand*{\affaddr}[1]{#1}
+\newcommand*{\affmark}[1][*]{\textsuperscript{#1}}
+
+\skip\footins 10pt plus 4pt minus 2pt
+\footnotesep 7pt
+\footskip 10mm
+\skip\@mpfootins = \skip\footins
+\fboxsep = 3pt \fboxrule = .4pt
+
+\def\footnoterule{\vspace*{-3pt}%
+    \hrule width 3.25cm height 0.015cm \vspace*{2.6pt}}
+
+\setlength{\parindent}{0.5cm}
+
+% Floating enviroments
+\textfloatsep 6pt plus 0pt minus 0pt
+\def\figure{\@float{figure}}
+\def\endfigure{\end@float}
+\intextsep 6pt plus 0pt minus 0pt
+
+% Figure captions
+\def\thefigure{\@arabic\c@figure}
+\def\fnum@figure{\small \textit Fig.~\thefigure}
+
+% Table captions
+\def\thetable{\@arabic\c@table}
+\def\fnum@table{\small  Table~\thetable}
+
+\setlength{\abovecaptionskip}{2pt}
+\setlength{\belowcaptionskip}{6pt}
+
+\makeatother
+
+% Poczatek streszczenia
+
+\pagestyle{fancy}
+\fancyhf{}
+\chead{II ed. XII Conference Young Scientists in Power Engineering\\
+Faculty of Mechanical and Power Engineering\\
+Wrocław University of Science and Technology\\
+9-11 december 2020}
+\renewcommand{\headrulewidth}{0.2pt}
+\setlength\headheight{21pt}
+\thispagestyle{firstpagestyle} 
+
+\renewcommand{\arraystretch}{1.25}

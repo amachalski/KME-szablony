@@ -1,0 +1,163 @@
+%
+% Szablon artykulu do pisma
+% "Zeszyty Energetyczne"
+%
+% Paczki
+\usepackage{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+\usepackage{booktabs}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{fancyhdr}
+\usepackage[justification=centerlast,font=small,labelfont=bf]{caption}
+\usepackage{hyperref}
+% Marginesy
+\usepackage[paperwidth=17cm, paperheight=24cm, left=1.75cm,top=1.5cm,right=1.75cm,bottom=2cm]{geometry}
+
+%Czcionka
+\usepackage{times}
+\usepackage[T1]{fontenc}
+
+% Brak odstepow w wypunktowaniu
+\usepackage{enumitem}
+\setlist[itemize]{noitemsep,nolistsep}
+\setenumerate{noitemsep}
+
+% Rozmiary tekstu
+\renewcommand{\normalsize}{\fontsize{11}{12}\selectfont}
+\renewcommand{\small}{\fontsize{9}{10}\selectfont}
+\renewcommand{\scriptsize}{\fontsize{7}{9}\selectfont}
+\renewcommand{\footnotesize}{\fontsize{9}{10}\selectfont}
+\renewcommand{\large}{\fontsize{12}{14}\selectfont}
+\renewcommand{\Large}{\fontsize{14}{16}\selectfont}
+\renewcommand{\LARGE}{\fontsize{18}{21}\selectfont}
+
+% Pozostale definicje
+\def\shorttitle#1{\gdef\@shorttitle{#1}}
+\def\@shorttitle{\@latex@error{No \noexpand\shorttitle given}\@ehc}
+
+\def\titleEng#1{\gdef\@titleEng{#1}}
+\def\@titleEng{\@latex@error{No \noexpand\titleEng given}\@ehc}
+
+\def\affiliations#1{\gdef\@affiliations{#1}}
+\def\@affiliations{\@latex@error{No \noexpand\affiliations given}\@ehc}
+
+\newcommand*{\affaddr}[2][*]{\textsuperscript{#1}#2\\}
+\newcommand*{\affmark}[1][*]{\textsuperscript{#1}}
+
+\def\contactaddress#1{\gdef\@contactaddress{#1}}
+\def\@contactaddress{\@latex@error{No \noexpand\contactaddress given}\@ehc}
+
+\def\authorheader#1{\gdef\@authorheader{#1}}
+\def\@authorheader{\@latex@error{No \noexpand\authorheader given}\@ehc}
+
+\let\runauthor\@author
+\let\runtitle\@title
+
+% Wciecia akapitu
+\setlength{\parindent}{0.75cm}
+
+\def\thesection{\arabic{section}}
+\def\thesubsection{\thesection.\arabic{subsection}}
+\def\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+\def\thesubsubsectiondis{\thesubsection.\arabic{subsubsection}}
+
+% Sekcje
+\def\section{\@startsection {section}{1}{\z@}{3ex plus .5ex
+     minus .2ex}{1.5ex plus .2ex}{\noindent\normalsize\bf\textsc}}
+\def\subsection{\@startsection{subsection}{2}{\z@}{2.0ex plus .5ex
+     minus .2ex}{1.0ex plus .2ex}{\normalsize\it}}
+  \def\subsubsection{\@startsection{subsubsection}{3}{\z@}{2.0ex plus .5ex
+     minus .2ex}{1.0ex plus .2ex}{\rm}}
+  \def\paragraph{\@startsection{paragraph}{4}{\z@}{1.0ex plus .5ex
+     minus .2ex}{0ex}{\rm}}
+\renewcommand\@seccntformat[1]{\csname the#1\endcsname. }
+
+% redefinicja otoczen plywajacych
+\textfloatsep 6pt plus 0pt minus 0pt
+\def\figure{\@float{figure}}
+\def\endfigure{\end@float}
+\intextsep 6pt plus 0pt minus 0pt
+
+% Podpis rysunkow
+\def\thefigure{\@arabic\c@figure}
+\def\fnum@figure{\small  Rys.~\thefigure}
+
+% Podpis tabel
+\def\thetable{\@arabic\c@table}
+\def\fnum@table{\small  Tab.~\thetable}
+\setlength{\abovecaptionskip}{2pt}
+
+% Odstepy w tabelach
+\renewcommand{\arraystretch}{1.25}
+
+% Tytul
+\renewcommand{\maketitle}{  
+  \thispagestyle{firstpagestyle}
+  \begin{center}
+      \Large {\textbf{\@title}}
+      \vspace{6pt}
+  \end{center}
+  \noindent\normalsize\textup{\textbf{\normalsize \@author}}
+  \\[1mm]
+  \footnotesize\textit{\@affiliations}\unpenalty
+  \\[2mm]
+  \footnotesize\textit{Email kontaktowy: \@contactaddress}
+  \\[2mm]
+}
+
+% definicja pola streszczenie za pomoca pola abstract
+\def\ZEabstract{%
+  \begin{center}
+  \begin{minipage}{10cm}
+  {\normalsize \begin{center} \textsc{Streszczenie} \end{center}}
+  \small}
+% zakonczenie pola abstract
+\def\endZEabstract{\end{minipage}\end{center}\par\normalsize\rm}
+
+\def\keywords{%
+  % 2 cm od prawego marginesu
+  \hspace{2cm}
+   % szerokosc pola tekstowego 13 cm
+  \begin{center}
+  \begin{minipage}{10cm}
+  % rozmiar small (10pt), kroj italic
+  {\small\bf\textsc{Słowa kluczowe:}}\small\it}
+% zakonczenie pola abstract, odleglosc 14pt metoda prob i bledow
+\def\endkeywords{\end{minipage}\end{center}\vspace{1pt}\par\normalsize\rm \noindent\makebox[\linewidth]{\rule{\linewidth}{0.4pt}}}
+
+
+% Naglowek i stopka
+\usepackage{fancyhdr}
+
+% Naglowek pierwszej strony
+\fancypagestyle{firstpagestyle}
+{
+   \fancyhf{}
+   \lhead{\includegraphics[width=2cm]{logoWME.jpg}}
+   \chead{{\normalsize\textsc{Zeszyty Energetyczne, Tom VII \\
+      \emph{Wydanie przy II edycji XII Konferencji\\
+      "Młodzi w Energetyce" 2020}}}\vspace{0.25cm}}
+  \setlength\headheight{3cm}
+  \def\headrule{{
+  \if@fancyplain\let\headrulewidth\plainheadrulewidth\fi
+  \hrule\@height\headrulewidth\@width\headwidth\vskip2pt%
+  \hrule\@height\headrulewidth\@width\headwidth\vskip-\headrulewidth\vskip-0pt
+}}
+\cfoot{}
+}
+% Dopasowanie pierwszej strony
+\enlargethispage{-15cm}
+
+% Nagłówek reszty tekstu
+\pagestyle{fancy}
+\setlength\headheight{1.3cm}
+\setlength{\headsep}{0.4cm}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[RE]{\small\textit{\@authorheader}}
+\fancyhead[LO]{\small\textit{\@shorttitle}}
+\cfoot{}
